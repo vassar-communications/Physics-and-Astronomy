@@ -1,0 +1,42 @@
+@import "../_imports";
+
+/* TYPOGRAPHY */
+
+/* LAYOUT */
+
+@media screen {
+	
+	.Module--sidebar.Module--news { /* Not sure about this but I think it was the only way to get to work. Needed to target the news module in the sidebar */
+		.Module__link {
+			padding: $sidebarModuleAnnouncements__link--padding; 
+			display: block;
+		}
+		.Module__listItem {
+			margin: 0 0 1em;
+			padding: 0;
+		}
+	}
+
+}
+
+@media all and (min-width: $small) {
+}
+	
+@media all and (min-width: $medium) {
+
+}
+
+@media all and (min-width: $large) {
+}
+
+/* COLOR */
+
+.Module--sidebar.Module--news {
+	.Module__listItem {
+		border-top: none;
+	}
+	.Module__link {
+		background: $sidebarModuleAnnouncements__link--background; 
+	}
+}
+

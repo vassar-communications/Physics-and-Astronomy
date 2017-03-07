@@ -1,0 +1,157 @@
+@import "../_imports";
+
+/* TYPOGRAPHY */
+
+.u-ArticleListItem__title {
+	font: $u-ArticleListItem__title--font;
+}
+.u-ArticleListItem__label--type {
+	font: $u-ArticleListItem__label--type--font;
+}
+.u-ArticleListItem__label--dateline__posted {
+	font: $u-ArticleListItem__label--dateline__posted--font;
+}
+.u-ArticleListItem__label--dateline__postedDate {
+	font: $u-ArticleListItem__label--dateline__postedDate--font;
+}
+.u-ArticleNavGroup__navButton {
+	font-weight: $fontWeightBold;
+	font-size: .85em;
+	text-align: center;
+}
+
+/* LAYOUT */
+
+@media screen {
+
+	.icon_rss_link {
+		width: 32px;
+		height: 32px;
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+		line-height: 0;
+	}
+	/* LATEST .u-NewsList__heading--announcements {
+		margin-top: 0;
+	} */
+	/* .u-NewsList__itemContainer {
+		margin: $u-NewsList__itemContainer--margin;
+	} */
+	/* .u-NewsList__item {
+		background: $u-NewsList__item--background;
+		padding: $u-NewsList__item--padding;
+		display: block;
+	}
+	.u-NewsList__list {
+		margin: $u-NewsList__list--margin;
+			list-style:none;
+			padding-left:0;
+	} */
+	.u-ArticleListItem__title {
+		margin-bottom: 1.5%;
+	}
+	.u-ArticleListItem {
+		margin-bottom: 7%;
+	}
+	.u-ArticleListItem__thumbnail {
+		float: left;
+		margin: 0 2.5% 2.5% 0;
+	}
+	.u-ArticleNavGroup {
+		padding: 5% 0;
+		width: 100%;
+		/* clear: both; use only when styling all 3 rows of news nav buttons using the starter flattened content. */ 
+	}
+	.u-ArticleNavGroup__navButton {
+		float: left;
+		display: block;
+		padding: .3em .5em;
+		margin: 0 2% 0 0;
+		width:23%;
+	}
+	.u-ArticleNavGroup__navButton--more {
+		width: 75%;
+	}
+	.u-ArticleNavGroup__navButton--next:after {
+		content: "\2192";
+		margin-left: .3em
+	}
+	.u-ArticleNavGroup__navButton--prev:before {
+		content: "\2190";
+		margin-right: .3em;
+	}
+	.u-ArticleNavGroup__navButton--archive {
+		width:23%;
+		margin-right: 0;
+		float: right;
+	}
+
+}
+
+@media all and (min-width: $small) {
+}	
+	
+@media all and (min-width: $medium) {
+}
+
+@media all and (min-width: $large) {
+}
+
+/* COLOR */
+
+/* u-NewsTools in sidebar this class was previously in news-base.css */
+.icon_rss_link {
+	background: url(http://collegerelations.vassar.edu/centralincludes/css/icons/main_icons/rss_large.gif) no-repeat;
+	border: none;
+}
+/* this class should be removed from the u-NewsTools sidebar markup and replaced with .icon-mail which is already centralized */
+.icon-envelope:before {
+	content: "\45\6d\61\69\6c";
+}
+.u-ArticleListItem__link {
+	@include link-colors(
+	$u-ArticleListItem__link--linkColor, 
+	$u-ArticleListItem__link--linkColorHoverFocus,
+	$u-ArticleListItem__link--linkColorActive,
+	$u-ArticleListItem__link--linkColorVisited,
+	$u-ArticleListItem__link--linkColorHoverFocus);
+}
+
+.u-ArticleListItem__link,
+.u-ArticleListItem__label a,
+/* LATEST .u-NewsList__heading--announcements a,
+.u-NewsList__item,
+.viewMore a */ {
+	border-bottom: none;
+}
+	
+.u-ArticleNavGroup__navButton {
+	border: none;
+  @include background-colors(
+		$buttonBgColor, 
+		$buttonBgColorHoverFocus, 
+		$buttonBgColorActive, 
+		$buttonBgColorVisited, 
+		$buttonBgColorHoverFocus);
+  @include link-colors(
+		$buttonLinkColor, 
+		$buttonLinkColorHoverFocus, 
+		$buttonLinkColorActive, 
+		$buttonLinkColorVisited, 
+		$buttonLinkColorHoverFocus);
+}
+.u-ArticleNavGroup__navButton--archive {
+  @include background-colors(
+		$uniqueButtonBgColor, 
+		$uniqueButtonBgColorHoverFocus, 
+		$uniqueButtonBgColorActive, 
+		$uniqueButtonBgColorVisited, 
+		$uniqueButtonBgColorHoverFocus);
+  @include link-colors(
+		$uniqueButtonLinkColor, 
+		$uniqueButtonLinkColorHoverFocus, 
+		$uniqueButtonLinkColorActive, 
+		$uniqueButtonLinkColorVisited, 
+		$uniqueButtonLinkColorHoverFocus);
+}

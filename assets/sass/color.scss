@@ -1,0 +1,111 @@
+@import "_imports";
+
+/*	COLOR
+	===== */
+a {
+  /*link-colors($normal, $hover, $active, $visited, $focus)*/
+  @include link-colors($linkColor, $linkColorHoverFocus, $linkColorActive ,$linkColorVisited, $linkColorHoverFocus);
+  transition: all .23s ease-in-out;
+	text-decoration: none;
+	border-bottom: 1px solid $linkBorderColor;
+	padding-bottom: 0;
+}
+html {
+	background: #fff;
+	color: $blueGreen;
+}
+.u-lHeader {
+	background: none;
+}
+.u-lFooter {
+	background: none;
+}
+tbody { 
+	tr:nth-child(odd) {
+		background-color: $whiteGreen;
+	}
+	td,
+	th {
+	border: 1px solid $lightGreen;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	color: $darkGreen;
+}
+
+/* Additions */
+
+.u-pageTitle {
+	color: $blueGreen;
+}
+.u-Masthead__siteName--link {
+	@include link-colors($lightGreen, $mediumGreen, #fff, $lightGreen, $mediumGreen);
+}
+.u-Masthead__vassar--link,
+.ac-NavAnchor--menu,
+.u-Search__button {
+  /*link-colors($normal, $hover, $active, $visited, $focus)*/
+  @include link-colors(white, $lightGreen, $mediumGreen, white, $lightGreen);
+}
+.u-NavSite__item {
+	 @include link-colors($blueGreen, $mediumGreen, $mediumGreen, $blueGreen, $mediumGreen);
+}
+.u-NavSite__item.u-NavSite__item--isCurrent {
+	@include link-colors($darkGreen, $mediumGreen, $mediumGreen, $darkGreen, $mediumGreen);
+}
+.u-NavSite__item--isOpen .u-NavSite__item {
+	@include link-colors($mediumGreen, $darkGreen, $darkGreen, $mediumGreen, $darkGreen);
+}
+.u-NavSite__item--isOpen .u-NavSite__item.u-NavSite__item--isCurrent {
+	@include link-colors($darkGreen, $mediumGreen, $mediumGreen, $darkGreen, $mediumGreen);
+}
+.u-Masthead__siteName {
+	text-shadow: 0px 0px 30px rgba(255, 255, 255, .4);
+}
+.u-lHeader {
+	background: transparent url(../images/css/physics-astronomy-bg-top.jpg) no-repeat center center; 
+	background-size: cover;
+}
+.u-lFooter {
+	background: transparent url(../images/css/physics-astronomy-bg-bottom.jpg) no-repeat center center; 
+	background-size: cover;
+}
+.u-lContent {
+	padding: 0 1em;
+}
+@media all and (min-width: $medium) {
+	.u-lHeader {
+		background: transparent url(../images/css/physics-astronomy-bg-top.jpg) no-repeat center center; 
+		background-size: cover;
+		border-style: solid;
+		border-width: 0px 0px 40px;
+		border-image: url(../images/css/physics-astronomy-border-top.png) 0 0 40 repeat;
+	}
+	.u-lFooter {
+		background: transparent url(../images/css/physics-astronomy-bg-bottom.jpg) no-repeat center center; 
+		background-size: cover;
+		border-style: solid;
+		border-width: 40px 0px 0px;
+		border-image: url(../images/css/physics-astronomy-border-bottom.png) 40 0 0 repeat;
+	}
+}
+.myDIV {
+	display: none;
+}
+.u-lFooter .u-VCard__item,
+.u-lFooter .u-VCard__item:visited {
+	color: #fff;
+}
+.u-BreadCrumbs {
+ border-bottom: 1px solid #CFE2CE;
+}
+a.u-Galleria__caption {
+  @include link-colors($linkColor, $linkColorHoverFocus, $linkColorActive ,$linkColorVisited, $linkColorHoverFocus);
+	text-decoration: none;
+	border-bottom: 0;
+}
+@media (min-width: 600px) {
+	.u-Search {
+	  background-color: transparent;
+	}
+}

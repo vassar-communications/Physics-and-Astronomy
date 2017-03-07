@@ -1,0 +1,113 @@
+/*	CONFIG
+	====== */
+/*	TYPOGRAPHY
+	========== */
+/*	LAYOUT
+	====== */
+/* Site breakpoints */
+/* The padding on u-lHeader, u-lMain, u-lFooter, and u-NavSite. */
+/* COLOR
+	====== */
+/* Basic link colors - these colors also affect the Google Search result link colors */
+/* MODULES
+	======== */
+/* Bios */
+/* Breadcrumbs  */
+/* Footer */
+/* Images */
+/*	Google search results  */
+/* The color of the URL that appears below each result title */
+/* Currently being overridden by something in Google's default CSS */
+/* The numbers that represent pages of search results */
+/* Nav */
+/* level 3 covers Level 3 and up. */
+/* News  */
+/* LATEST Modules basic */
+/* Use these variables to place a bg color on side news announcement items */
+/* News  */
+/* Not sure all these color settings are necessary
+$u-ArticleListItem__label--type--color:;
+$u-ArticleListItem__label--dateline__posted--color:;
+$u-ArticleListItem__label--dateline__postedDate--color:f; */
+/* LATEST Moved to Module Basic above
+$u-NewsList__itemContainer--margin: 1em 0;
+$u-NewsList__item--background: transparent;
+$u-NewsList__item--padding: 0; */
+/*	Basic button bg colors: used in news at bottom of page so far
+	----------------- */
+/*	Search
+	------ */
+/*	Up until this point, the search box will be positioned
+	over the masthead, so as not to overlap it. This point
+	depends on how wide the site masthead is. Keep increasing it
+	until the search box no longer overlaps the masthead.
+*/
+/*	Mobile search colors
+	-------------------- */
+/*	Mobile menu colors
+	------------------ */
+/*	Mobile search and menu colors
+	----------------------------- */
+/* The background color of a button, when activated */
+/*	Mobile search colors
+	-------------------- */
+/* The background of the "Vassar College" area */
+/* The background of the search and menu buttons */
+/* The color of the search icon and Menu text */
+/* The color of the space between search and menu */
+/* Don't modify these */
+/* TYPOGRAPHY */
+.Module--sidebar b, .Module--sidebar p, .Module--sidebar .all-link, .Module--sidebar .moreLink, .Module--sidebar .Module__listItem {
+  font: 300 0.9rem "camingodos-web"; }
+.Module--sidebar .Module__header {
+  font: 600 1.25rem/1.1 "camingodos-web"; }
+.Module--sidebar .Module__label--side {
+  font: 600 0.9rem "camingodos-web"; }
+.Module--sidebar .Module__name {
+  font: 600 0.9rem "camingodos-web"; }
+
+/* LAYOUT */
+@media screen {
+  .Module--sidebar {
+    margin: 0 0 1.5em; }
+    .Module--sidebar .all-link {
+      margin: 0 0 1em; }
+    .Module--sidebar .Module__label, .Module--sidebar dd {
+      margin: 0;
+      padding: 0;
+      display: inline-block; }
+    .Module--sidebar .Module__header {
+      margin-top: 0; }
+    .Module--sidebar .Module__label {
+      margin-right: .25em; }
+    .Module--sidebar .Module__list {
+      margin: 0;
+      list-style: none;
+      padding-left: 0; }
+    .Module--sidebar .Module__listItem {
+      padding: .3em 0;
+      margin: 0; }
+    .Module--sidebar .Module__listItem:last-of-type {
+      margin-bottom: 1em; }
+    .Module--sidebar .Module__name {
+      margin-bottom: 0; }
+    .Module--sidebar .moreLink {
+      display: block; } }
+/* COLOR */
+.Module--sidebar a {
+  border-bottom: none; }
+.Module--sidebar .Module__headerLink {
+  color: #4b9347; }
+  .Module--sidebar .Module__headerLink:visited {
+    color: #00676b; }
+  .Module--sidebar .Module__headerLink:focus {
+    color: #86c11a; }
+  .Module--sidebar .Module__headerLink:hover {
+    color: #86c11a; }
+  .Module--sidebar .Module__headerLink:active {
+    color: #beee00; }
+.Module--sidebar .Module__listItem:first-child,
+.Module--sidebar .Module__listItem:first-of-type {
+  border-top: none; }
+.Module--sidebar .Module__listItem {
+  border-top: 1px solid #CFE2CE; }
